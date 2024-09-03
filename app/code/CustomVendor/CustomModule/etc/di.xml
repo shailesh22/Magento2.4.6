@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="CustomVendor\CustomModule\Controller\Index\PluginExample">
+        <plugin name="CustomVendor_CustomModule_Plugin"
+            type="CustomVendor\CustomModule\Plugin\CustomPlugin" sortOrder="10" disabled="false" />
+    </type>
+    <preference for="CustomVendor\CustomModule\Api\CategoryInterface"
+        type="CustomVendor\CustomModule\Module\Category" />
+    <preference for="CustomVendor\CustomModule\Api\ProductRepositoryInterface"
+        type="CustomVendor\CustomModule\Model\Api\ProductRepository" />
+    <preference for="CustomVendor\CustomModule\Api\RequestItemInterface"
+        type="CustomVendor\CustomModule\Model\Api\RequestItem" />
+    <preference for="CustomVendor\CustomModule\Api\ResponseItemInterface"
+        type="CustomVendor\CustomModule\Model\Api\ResponseItem" />
+</config>
